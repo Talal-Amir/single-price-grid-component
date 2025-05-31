@@ -1,0 +1,179 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+display: block;
+max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 2. CSS Variables */
+
+:root {
+  /* Colors: HSL (Hue, Saturation, Lightness) */
+
+  /* Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* Neutral */
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  
+  /* Font Families */
+
+ --font-karla: "karla", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+    font-family: var(--font-karla), sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* CSS */
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--Light-Gray);
+}
+
+.pricing-card{
+    max-width: 58rem;
+    padding: 2rem;
+}
+/* .card-box{} */
+.about-us{
+    background-color: #fff;
+    padding-inline: 4rem;
+    padding-block: 4rem;
+    border-radius: .8rem .8rem 0 0;
+}
+.main-heading{
+    font-size: 2rem;
+    color: var(--Cyan);
+    margin-bottom: 1.4rem;
+}
+.main-desc{
+    font-size: 1.6rem;
+    color: var(--Bright-Yellow);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+.main-text{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+}
+.pricing{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.price-section{
+    background-color: var(--Cyan);
+    padding: 3rem 4rem;
+    border-radius: 0 0 0 .8rem;
+}
+.pricing-heading{
+    font-size: 1.8rem;
+    color: var(--Light-Gray);
+    margin-bottom: 1.2rem;
+}
+.Value{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: .8rem;
+}
+.price{
+    font-size: 2rem;
+    color: var(--Light-Gray);
+    font-weight: 700;
+}
+.month{
+    font-size: 1.2rem;
+    color: #c7deeb;
+}
+.access{
+    font-size: 1.2rem;
+    color: var(--Light-Gray);
+    margin-bottom: 2rem;
+}
+.pricing-btn{
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: var(--Bright-Yellow);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: .6rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
+}
+.why-us{
+    background-color: #4ABEBD;
+    padding: 3rem 4rem;
+    border-radius: 0 0 .8rem 0;
+}
+.why-us--heading{
+    font-size: 1.8rem;
+    color: var(--Light-Gray);
+    margin-bottom: 1.6rem;
+}
+.why-us--text{
+    font-size: 1.2rem;
+    color: var(--Light-Gray);
+}
+
+@media (max-width: 520px) {
+
+.pricing{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.price-section{
+    border-radius: 0;
+}
+
+.why-us{
+    background-color: #4ABEBD;
+    padding: 3rem 4rem;
+    border-radius: 0 0 .8rem .8rem;
+}
+}
